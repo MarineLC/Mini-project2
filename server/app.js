@@ -79,19 +79,6 @@ app.get("/api/students/:studentId", async (req, res) => {
   const student = await Student.findById(studentId);
   res.json(student);
 });
-/*
-    .then((student) => {
-      if (!student) {
-        return res.status(404).json({ error: "Student not found" });
-      }
-      console.log("Retrived student by ID ", student);
-      res.json(student);
-    })
-    .catch((error) => {
-      console.log("Error while retreiving student by ID", error);
-      res.status(500).send({ error: "failed to retrieve student" });
-    });
-    */
 
 //  PUT /api/students/:studentId - Updates a specific student by id
 app.put("/api/students/:studentId", (req, res) => {
